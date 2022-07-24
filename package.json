@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js --runMode=FORK --port=8080",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js --runMode=FORK",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "forever start -w src/server.js --runMode=CLUSTER --port=8080",
+    "prod": "forever start -w src/index.js --runMode=CLUSTER --PORT=8080",
     "pm2": "pm2 start ecosystem.config.js",
     "artillery:fork": "artillery run artillery.yml",
     "artillery:cluster": "artillery quick --count 50 -n 40 http://localhost:8080/randoms/10000",
-    "start:profilling": "node --prof --logfile=foo.log --no-logfile-per-isolate src/server.js",
-    "start:inspect": "node --inspect src/server.js",
+    "start:profilling": "node --prof --logfile=foo.log --no-logfile-per-isolate src/index.js",
+    "start:inspect": "node --inspect src/index.js",
     "autocannon": "autocannon -c 100 -d 20 'http://localhost:8080/randoms/1000"
   },
   "engines": {

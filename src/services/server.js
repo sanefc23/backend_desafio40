@@ -4,22 +4,21 @@ const cookieParser = require('cookie-parser');
 const {
     engine
 } = require("express-handlebars");
-const routerAPI = express.Router();
 const PATH = require('path')
 const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
-const config = require('../src/config/config')
-const productRouter = require("./routers/productRouter");
-const userRouter = require("./routers/userRouter");
-const mongoose = require("mongoose");
+const config = require('../config/config');
+const mainRouter = require('../routers/mainRouter');
+const MongoDBClient = require("../services/dbMongo");
 const MongoStore = require("connect-mongo")
 const passport = require('passport');
 const flash = require('connect-flash');
 const compression = require('compression');
 const args = require('minimist')(process.argv);
 const PORT = process.env.PORT || args[2];
-const logger = require('../src/services/logger');
+const logger = require('./logger');
+const Products = require('../APIs/productsAPI')
 
 const {
     fork
@@ -28,8 +27,8 @@ const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 
 // --- MongoDB Models ---
-const Message = require("./db/Message");
-const Product = require("./db/Product");
+const Message = require("../models/Message");
+const Product = require("../APIs/productsAPI");
 
 // --- Normalizr ---
 const normalizr = require('normalizr');
@@ -56,10 +55,6 @@ app.use(cookieParser());
 app.use(flash());
 app.use(compression());
 
-server.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
-server.on("error", (error) => console.log("Server Error\n\t", error));
-console.log(`Worker ${process.pid} started`)
-
 // --- Session ---
 const sessionOptions = {
     store: MongoStore.create({
@@ -83,9 +78,7 @@ app.use(function (err, req, res, next) {
 });
 
 // Routers
-app.use("/", routerAPI);
-app.use("/productos", productRouter);
-app.use("/user", userRouter);
+app.use('/', mainRouter);
 
 app.get('/', (req, res) => {
     res.redirect('/productos')
@@ -135,13 +128,11 @@ app.set("view engine", "hbs");
 //Mongoose
 connect()
 
-function connect() {
-    mongoose.connect(config.MONGO_ATLAS_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            serverSelectionTimeoutMS: 1000
+async function connect() {
+    await MongoDBClient.getConnection()
+        .then(() => {
+            logger.info('Conectado a la base de datos...')
         })
-        .then(() => logger.info('Conectado a la base de datos...'))
         .catch(error => logger.info('Error al conectarse a la base de datos', error));
 }
 
@@ -181,19 +172,16 @@ io.on('connection', (socket) => {
     }
 
     //funcion para leer todos los productos de la db y mostrarlos.
-    function selectAllProducts() {
-        Product.find().sort({
-                '_id': 1
-            })
-            .then(products => {
-                socket.emit('productCatalog', {
-                    products: products,
-                    errorMessage: "No hay productos"
-                });
-            })
-            .catch(e => {
-                logger.error('Error getting products: ', e);
+    async function selectAllProducts() {
+        try {
+            const products = await Products.getProducts();
+            socket.emit('productCatalog', {
+                products: products,
+                errorMessage: "No hay productos"
             });
+        } catch (error) {
+            logger.error('Error getting products: ', e);
+        }
     }
 
     //Llamo a las funciones para que se muestren los mensajes y productos al levantar el servidor.
@@ -202,7 +190,7 @@ io.on('connection', (socket) => {
 
     //Inserto un nuevo mensaje en la base de datos de mensajes.
     socket.on('newMsg', newMsg => {
-        Product.create(newMsg)
+        Message.create(newMsg)
             .then(() => {
                 logger.info('Mensaje insertado');
                 selectAllMessages();
@@ -213,3 +201,5 @@ io.on('connection', (socket) => {
             });
     });
 });
+
+module.exports = server;

@@ -1,64 +1,43 @@
-const Product = require('../db/Product');
-const Message = require('../db/Message');
-const logger = require('../services/logger');
+const ProductsAPI = require('../APIs/productsAPI');
+const logger = require('../services/logger')
 
 const productController = {
     listProducts: (req, res) => {
-        logger.info('Productos: ', req.session);
-        logger.info(req.route);
-        const userName = req.session.passport ? req.session.passport.user : null;
-        Product.find().sort({
-                '_id': 1
-            })
-            .then(products => {
-                if (products.length) {
+        const id = req.params.id;
+        if (!id) {
+            ProductsAPI.getProducts()
+                .then(products => {
                     res.render('index', {
-                        userName: userName
+                        productos: products
                     })
-                } else {
-                    res.render('index', {
-                        ok: false,
-                        error: 'No hay products cargados',
-                        productos: []
-                    })
-                }
-            })
-            .catch(e => {
-                loggerErr.error('Error getting products: ', e);
-            })
-    },
-    testView: (req, res) => {
-        logger.info(req.route);
-        const fakeProds = []
-
-        if (fakeProds.length > 0) {
-            return res.render('index', {
-                testView: true,
-                fakeProds: fakeProds
-            })
+                })
+                .catch(e => {
+                    logger.error('Error getting products: ', e);
+                })
         } else {
-            return res.render('index', {
-                testView: true,
-                fakeProds: []
-            })
+            ProductsAPI.getProductById(id).
+            then(product => {
+                    res.render('index', {
+                        productos: [product]
+                    })
+                })
+                .catch(e => {
+                    logger.error('Error getting products: ', e);
+                })
         }
     },
     addProduct: (req, res) => {
-        logger.info(req.route);
-        Product.create(req.body)
+        ProductsAPI.addProduct(req.body)
             .then(prod => {
-                console.log('producto insertado: ', prod);
                 res.redirect('/productos')
             })
             .catch(e => {
-                loggerErr.error('Error en Insert producto: ', e);
+                logger.error('Error en Insert producto: ', e);
             });
     },
     showEditProduct: (req, res) => {
-        logger.info(req.route);
-        let currentID = req.params.id;
-
-        Product.findById(currentID)
+        const currentID = req.params.id;
+        ProductsAPI.getProducts(currentID)
             .then(prod => {
                 console.log(prod);
                 res.render('index', {
@@ -76,11 +55,8 @@ const productController = {
             });
     },
     editProduct: (req, res) => {
-        logger.info(req.route);
-        let id = req.params._id;
-        console.log(req.body);
-
-        Product.findByIdAndUpdate(id, req.body)
+        const id = req.params._id;
+        ProductsAPI.updateProduct(id, req.body)
             .then(prod => {
                 logger.warn('producto actualizado: ', prod);
                 res.redirect('/productos');
@@ -90,9 +66,8 @@ const productController = {
             });
     },
     deleteProduct: (req, res) => {
-        logger.info(req.route);
-        let id = req.params.idprod;
-        Product.findByIdAndDelete(id)
+        const id = req.params.idprod;
+        ProductsAPI.deleteProduct(id)
             .then(prod => {
                 logger.warn('producto eliminado: ', prod);
                 res.redirect('/productos');

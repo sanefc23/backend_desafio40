@@ -1,85 +1,215 @@
-[2022-07-14T21:58:31.064] [INFO] file1 - Conectado a la base de datos...
-[2022-07-14T21:58:38.452] [INFO] file1 - Conectado a la base de datos...
-[2022-07-14T22:03:37.366] [INFO] file1 - Productos:  Session {
-  cookie: {
-    path: '/',
-    _expires: 2022-07-15T01:04:35.681Z,
-    originalMaxAge: 60000,
-    httpOnly: true
-  }
-}
-[2022-07-14T22:03:37.366] [INFO] file1 - Route {
-  path: '/',
-  stack: [
-    Layer {
-      handle: [Function: listProducts],
-      name: 'listProducts',
-      params: undefined,
-      path: undefined,
-      keys: [],
-      regexp: /^\/?$/i,
-      method: 'get'
-    }
-  ],
-  methods: { get: true }
-}
-[2022-07-14T22:03:39.175] [INFO] file1 - Longitud antes de normalizar: 2137
-[2022-07-14T22:03:39.175] [INFO] file1 - Longitud después de normalizar: 1825
-[2022-07-14T22:03:39.263] [WARN] file1 - 404 - NOT FOUND
-[2022-07-14T22:03:44.039] [INFO] file1 - Route {
-  path: '/register',
-  stack: [
-    Layer {
-      handle: [Function: registerView],
-      name: 'registerView',
-      params: undefined,
-      path: undefined,
-      keys: [],
-      regexp: /^\/?$/i,
-      method: 'get'
-    }
-  ],
-  methods: { get: true }
-}
-[2022-07-14T22:03:44.648] [WARN] file1 - 404 - NOT FOUND
-[2022-07-14T22:04:08.432] [INFO] file1 - Route {
-  path: '/register',
-  stack: [
-    Layer {
-      handle: [Function: authenticate],
-      name: 'authenticate',
-      params: undefined,
-      path: undefined,
-      keys: [],
-      regexp: /^\/?$/i,
-      method: 'post'
-    }
-  ],
-  methods: { post: true }
-}
-[2022-07-14T22:04:09.346] [INFO] file1 - Productos:  Session {
-  cookie: {
-    path: '/',
-    _expires: 2022-07-15T01:05:09.110Z,
-    originalMaxAge: 60000,
-    httpOnly: true
-  },
-  passport: { user: 'sanef22@mail.com' }
-}
-[2022-07-14T22:04:09.346] [INFO] file1 - Route {
-  path: '/',
-  stack: [
-    Layer {
-      handle: [Function: listProducts],
-      name: 'listProducts',
-      params: undefined,
-      path: undefined,
-      keys: [],
-      regexp: /^\/?$/i,
-      method: 'get'
-    }
-  ],
-  methods: { get: true }
-}
-[2022-07-14T22:04:11.000] [INFO] file1 - Longitud antes de normalizar: 2137
-[2022-07-14T22:04:11.000] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T18:46:01.889] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:46:08.173] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:46:12.009] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:46:23.643] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:46:38.032] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:46:42.546] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:47:00.730] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:48:55.771] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:49:07.750] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:49:08.337] [ERROR] file1 - Error getting products:  ReferenceError: Products is not defined
+    at Object.getProducts (D:\CoderHouse Backend\Clase40\src\APIs\productsAPI.js:35:28)
+    at listProducts (D:\CoderHouse Backend\Clase40\src\controllers\productController.js:8:25)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:341:12)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:174:3)
+[2022-07-24T18:49:22.468] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:49:23.188] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:49:45.166] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:51:25.831] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:51:29.439] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:51:33.952] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:51:37.841] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:52:01.422] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:52:04.041] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:52:14.579] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:52:17.094] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:52:21.751] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:52:24.364] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:52:30.117] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:52:32.825] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:52:38.411] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:52:40.885] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:52:51.673] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:52:54.270] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T18:53:10.022] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:53:45.541] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:53:54.491] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:53:59.309] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:54:05.332] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:54:14.815] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:55:08.682] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:55:11.843] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:55:17.598] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:55:46.636] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:56:06.120] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:56:10.271] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:56:19.955] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:56:24.700] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T18:56:46.876] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:00:53.240] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:03:11.592] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:03:32.603] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:03:46.164] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:03:49.590] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:04:09.781] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:05:01.765] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:05:10.294] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:05:19.566] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:05:57.019] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:06:11.031] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:06:16.241] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:06:30.481] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:08:27.229] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:09:35.172] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:09:39.636] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:09:50.753] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:09:55.642] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:10:04.479] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:10:07.414] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:10:35.284] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:10:46.281] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:10:57.846] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:11:51.600] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:12:20.408] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:15:51.979] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:16:10.390] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:16:24.348] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:17:27.641] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:18:48.461] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:18:52.151] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:19:55.423] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:20:01.226] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:20:03.761] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:20:24.521] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:20:28.679] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:20:31.278] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:21:46.467] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:21:50.139] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:21:52.758] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:22:36.140] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:22:47.422] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:22:49.967] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:23:46.916] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:23:53.399] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:23:56.052] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:24:18.107] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:24:42.623] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:24:46.736] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:25:00.151] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:25:02.815] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:25:17.000] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:25:19.486] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:27:44.503] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:29:28.763] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:29:31.297] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:29:46.084] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:30:36.276] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:33:21.716] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:33:22.465] [ERROR] file1 - Error en Insert producto:  TypeError: Products.postProduct is not a function
+    at Object.addProduct (D:\CoderHouse Backend\Clase40\src\APIs\productsAPI.js:6:46)
+    at addProduct (D:\CoderHouse Backend\Clase40\src\controllers\productController.js:30:21)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:341:12)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:174:3)
+[2022-07-24T19:33:24.620] [WARN] file1 - 404 - NOT FOUND
+[2022-07-24T19:33:40.492] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:33:43.437] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:33:43.438] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:33:56.935] [ERROR] file1 - Error en Insert producto:  TypeError: Products.postProduct is not a function
+    at Object.addProduct (D:\CoderHouse Backend\Clase40\src\APIs\productsAPI.js:6:46)
+    at addProduct (D:\CoderHouse Backend\Clase40\src\controllers\productController.js:30:21)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:341:12)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:174:3)
+[2022-07-24T19:33:57.056] [ERROR] file1 - Error en Insert producto:  TypeError: Products.postProduct is not a function
+    at Object.addProduct (D:\CoderHouse Backend\Clase40\src\APIs\productsAPI.js:6:46)
+    at addProduct (D:\CoderHouse Backend\Clase40\src\controllers\productController.js:30:21)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:341:12)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:174:3)
+[2022-07-24T19:34:07.055] [ERROR] file1 - Error en Insert producto:  TypeError: Products.postProduct is not a function
+    at Object.addProduct (D:\CoderHouse Backend\Clase40\src\APIs\productsAPI.js:6:46)
+    at addProduct (D:\CoderHouse Backend\Clase40\src\controllers\productController.js:30:21)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:341:12)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:174:3)
+[2022-07-24T19:34:29.535] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:34:29.536] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:35:15.353] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:35:15.353] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:36:01.860] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:36:01.860] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:36:48.194] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:36:48.195] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:37:34.182] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:37:34.182] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:38:17.292] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:38:17.292] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:38:56.868] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:39:07.540] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:39:09.607] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:39:09.607] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:39:10.143] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:39:10.144] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:39:26.320] [ERROR] file1 - Error en Insert producto:  TypeError: Products.postProduct is not a function
+    at Object.addProduct (D:\CoderHouse Backend\Clase40\src\APIs\productsAPI.js:6:46)
+    at addProduct (D:\CoderHouse Backend\Clase40\src\controllers\productController.js:30:21)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:341:12)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:174:3)
+[2022-07-24T19:39:56.283] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:39:56.284] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:40:16.135] [ERROR] file1 - Error en Insert producto:  TypeError: Products.postProduct is not a function
+    at Object.addProduct (D:\CoderHouse Backend\Clase40\src\APIs\productsAPI.js:6:46)
+    at addProduct (D:\CoderHouse Backend\Clase40\src\controllers\productController.js:30:21)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\layer.js:95:5)
+    at D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:341:12)
+    at next (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\CoderHouse Backend\Clase40\node_modules\express\lib\router\index.js:174:3)
+[2022-07-24T19:40:18.048] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:40:20.245] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:40:20.245] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:41:26.747] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:41:29.324] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:41:29.325] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:41:43.462] [INFO] file1 - Producto insertado: [object Object]
+[2022-07-24T19:41:45.368] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:41:45.368] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-24T19:43:59.265] [INFO] file1 - Conectado a la base de datos...
+[2022-07-24T19:44:01.372] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-24T19:44:01.373] [INFO] file1 - Longitud después de normalizar: 1825
