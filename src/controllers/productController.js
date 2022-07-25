@@ -4,11 +4,14 @@ const logger = require('../services/logger')
 const productController = {
     listProducts: (req, res) => {
         const id = req.params.id;
+        const userName = req.session.passport != undefined ? req.session.passport.user : false
+
         if (!id) {
             ProductsAPI.getProducts()
                 .then(products => {
                     res.render('index', {
-                        productos: products
+                        productos: products,
+                        userName: userName
                     })
                 })
                 .catch(e => {
