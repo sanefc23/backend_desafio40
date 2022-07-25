@@ -513,3 +513,59 @@
 [2022-07-25T20:23:10.181] [INFO] file1 - Conectado a la base de datos...
 [2022-07-25T20:23:12.223] [INFO] file1 - Longitud antes de normalizar: 2137
 [2022-07-25T20:23:12.223] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:42:52.116] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:42:54.291] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:42:54.291] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:42:54.830] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:42:54.830] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:43:30.413] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:43:42.468] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:43:45.429] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:44:11.698] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:44:57.039] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:45:09.162] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:48:26.755] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:48:51.116] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:49:02.503] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:49:07.169] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:49:07.169] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:49:47.658] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:49:52.281] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:49:52.281] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:49:59.701] [WARN] file1 - User logged: asdfgh@mail.com
+[2022-07-25T20:50:01.040] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:50:01.040] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:50:41.643] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:50:41.643] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:51:49.154] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:51:51.664] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:51:53.918] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:51:53.919] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:51:54.461] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:51:54.461] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:52:07.388] [WARN] file1 - User logged: asdfgh@mail.com
+[2022-07-25T20:52:09.932] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:52:09.932] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:52:42.118] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:52:48.103] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:52:50.742] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:52:52.878] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:52:52.878] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:52:53.820] [ERROR] file1 - Error getting products:  ReferenceError: userNames is not defined
+    at D:\CoderHouse Backend\Clase40\src\controllers\productController.js:13:45
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-07-25T20:52:57.008] [ERROR] file1 - Error getting products:  ReferenceError: userNames is not defined
+    at D:\CoderHouse Backend\Clase40\src\controllers\productController.js:13:45
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-07-25T20:53:25.617] [INFO] file1 - Conectado a la base de datos...
+[2022-07-25T20:53:29.369] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:53:29.369] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:53:39.562] [WARN] file1 - User not found: asdfg@mail.com
+[2022-07-25T20:53:40.142] [WARN] file1 - 404 - NOT FOUND
+[2022-07-25T20:53:46.740] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:53:46.740] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:53:54.825] [WARN] file1 - User logged: asdfgh@mail.com
+[2022-07-25T20:53:56.065] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:53:56.065] [INFO] file1 - Longitud después de normalizar: 1825
+[2022-07-25T20:54:02.942] [INFO] file1 - Longitud antes de normalizar: 2137
+[2022-07-25T20:54:02.942] [INFO] file1 - Longitud después de normalizar: 1825

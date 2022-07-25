@@ -2,6 +2,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const usersAPI = require('../APIs/usersAPI');
 const bcrypt = require("bcrypt");
+const logger = require('../services/logger')
 
 passport.use('login', new LocalStrategy({
         usernameField: 'userName',
@@ -9,25 +10,16 @@ passport.use('login', new LocalStrategy({
         passReqToCallback: true
     },
     async function (req, userName, password, done) {
-        const userFound = await usersAPI.getByEmail(userName)
-        const validate = (err, user) => {
-            console.log('validate: ', user);
-            if (err)
-                return done(err);
-            if (!userFound) {
-                message = `User not found with email: ${userName}`;
-                req.flash('User not found with email: ', userName);
-                return done(null, false, req.flash('User not found!'))
-            }
-            if (!bcrypt.compareSync(password, user.password)) {
-                message = 'Invalid Password';
-                console.log('user ASDASDASA: ', user);
-                console.log('Invalid Password');
-                return done(null, false, req.flash('Invalid Password'))
-            }
-            return done(null, userFound);
+        const user = await usersAPI.getByEmail(userName);
+        const validPassword = () => bcrypt.compareSync(password, user.password)
+        if (!user || !validPassword) {
+            logger.warn('User not found: ' + userName)
+            return done(null, false, {
+                message: 'Invalid Username/Password'
+            })
         }
-        return validate(userFound);
+        logger.warn('User logged: ' + userName)
+        return done(null, user)
     }
 ));
 

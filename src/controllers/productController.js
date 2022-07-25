@@ -5,7 +5,6 @@ const productController = {
     listProducts: (req, res) => {
         const id = req.params.id;
         const userName = req.session.passport != undefined ? req.session.passport.user : false
-
         if (!id) {
             ProductsAPI.getProducts()
                 .then(products => {
